@@ -3,3 +3,4 @@ void cl() {
 	char system(char *command);
 	system("clear");
 }
+
