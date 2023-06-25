@@ -7,7 +7,7 @@
 int main(void) {
     char x, p[4];
     int y, i;
-    int n = 1;
+    int n = 0;
 	
 	// input functions  to ignore
 	void araa(){
