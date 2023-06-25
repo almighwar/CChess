@@ -1,25 +1,28 @@
   /*---------------------------------------*/
- /*           卂ㄥ爪丨Ꮆ卄山卂尺           */
+ /*            卂ㄥ爪丨Ꮆ卄山卂尺            */
 /*---------------------------------------*/
 
-
-#include <stdio.h>
-#include <string.h>
 #include "lib.h"
 
 int main(void) {
     char x, p[4];
     int y, i;
+    int n = 1;
 	
 	// input functions  to ignore
 	void araa(){
-		scanf(" %s", &p);
+		scanf(" %19s", p);
 	}
 	
 	void ara(){
 	y = getchar();
 	fflush(stdin);
 	y = getchar();
+	}
+	
+	void pn(){
+	for(;;){n++; break;}
+	printf("\033[1;34mPuzzle:\033[0m %d\n", n);
 	}
 
     // Clear function 
@@ -54,6 +57,9 @@ int main(void) {
             switch(y){
            		case '1':
            			cl();
+           			
+           			// Puzzle mate in one
+           			pn();
            			puts("[░░][  ][░░][ Q][░░][ R][░K][  ]8");
            			puts("[  ][░░][  ][░░][  ][░P][ B][░P]7");
            			puts("[░░][  ][░░][  ][░░][ q][░P][  ]6");
@@ -71,7 +77,85 @@ int main(void) {
             			printf("\nWhat's the move: ");
             			araa();
             			if(!strcmp(p, "qxg7")){
-            				puts("Correct");
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░R][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░K]7");
+           			puts("[░░][  ][░P][  ][░P][ p][░P][  ]6");
+           			puts("[  ][░░][  ][░P][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░r][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][ p][░p][ p]2");
+           			puts("[  ][░░][  ][░░][  ][░k][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh1")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░R][  ][░░][ R][░K][  ]8");
+           			puts("[  ][░░][ Q][░░][  ][░P][  ][░P]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░P][ q]6");
+           			puts("[  ][░░][  ][░░][ p][░░][ n][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░p][ p][░p][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][ k][░r][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "qxh7")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][ R][░░][  ][░░][  ][░K][  ]8");
+           			puts("[  ][░Q][  ][░░][  ][░P][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][ b][░P][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░p][ p][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░k][  ][░░][  ][░░][  ][░r]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
             				break;
             			}
             			else{
