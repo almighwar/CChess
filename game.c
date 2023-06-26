@@ -25,7 +25,9 @@ int main(void) {
 	for(;;){n++; break;}
 	printf(CLR_B "Puzzle:" CBL_N "%d\n", n);
 	}
-
+	
+	// Menu of the Game
+	menuGame:
     // Clear function 
     cl();
 
@@ -52,11 +54,13 @@ int main(void) {
             puts("[░p][ p][░p][ p][░p][ p][░p][ p]2");
             puts("[ r][░n][ b][░q][ k][░b][ n][░r]1");
             puts("-a---b---c---d---e---f---g---h--");
-            printf("\nPuzzles:\n1:Mate\n\nEnter: ");
+            printf("\nPuzzles:\n1: Mate\n0: Return to menu\nEnter: ");
             
             ara();
             
             switch(y){
+            	case '0':
+            		goto menuGame;
            		case '1':
            			cl();
            			
@@ -541,7 +545,7 @@ int main(void) {
             cl();
             
             // Display the menu of option menu
-            printf("1: Controls\n2: Display\n3: Sound\nEnter a choice: ");
+            printf("1: Controls\n2: Display\n3: Sound\n0: Return to menu\nEnter a choice: ");
 
             // The choice
             // Another Solution :
@@ -551,14 +555,15 @@ int main(void) {
 			ch = getchar(); */
 			
 			// To this
-            while ((y = getchar()) != '\n' && y != EOF);
-			y = getchar();
+            ara();
 			
 			// There's no choice
             switch (y) {
                 case '1':
                     puts("There's no Option, This for exercise");
                     break;
+                case '0':
+                	goto menuGame;
                 default:
                     puts("Also There's no Option, Just exercise");
                     break;
@@ -570,7 +575,14 @@ int main(void) {
             cl();
 
             // Information about the game
-            printf("Exercise: Menu Game\nAuthor: almighwar\nAccounts:\n\tLichess: almighwar_1\n\tChess.com: almighwar\n\nAbout the game: 2D Chess Game to learn chess tikitaka and games and solve puzzles\n\tit'll take another dimensions\n");
+            printf("Exercise: Menu Game\nAuthor: almighwar\nAccounts:\n\tLichess: almighwar_1\n\tChess.com: almighwar\n\nAbout the game: 2D Chess Game to learn chess tikitaka and games and solve puzzles\n\tit'll take another dimensions\nPress '0' to return to menu: ");
+            ara();
+            
+            switch(y){
+            	case '0':
+            		goto menuGame;
+
+            }
             break;
             
 		// Exit the game
