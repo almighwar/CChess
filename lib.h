@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "chess.h"
+
+#define CBL_N  "\033[0m"
+#define BLD  "\033[1m"
+#define CLR_B  "\033[1;34m"
+#define CLR_Y  "\033[1;33m"
+#define CLR_R  "\033[1;31m"
+#define ANM_BRED  "\033[1;5;31m"
+#define CLR_BB  "\033[1;34m"
 
 // Clear console function
 void cl() {

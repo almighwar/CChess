@@ -4,6 +4,7 @@
 
 #include "lib.h"
 
+
 int main(void) {
     char x, p[4];
     int y, i;
@@ -22,14 +23,15 @@ int main(void) {
 	
 	void pn(){
 	for(;;){n++; break;}
-	printf("\033[1;34mPuzzle:\033[0m %d\n", n);
+	printf(CLR_B "Puzzle:" CBL_N "%d\n", n);
 	}
 
     // Clear function 
     cl();
 
     // Display the menu options
-    printf("Chess Game\n1: Start Game\n2: Option\n3: About Game\n4: Exit Game\nEnter your choice: ");
+    chesstext();
+	printf(BLD "Chess Game\n" CBL_N "1: Start Game\n2: Option\n3: About Game\n4: Exit Game\nEnter your choice: ");
     scanf(" %c", &x);
 
     // The choice
@@ -39,8 +41,8 @@ int main(void) {
             cl();
             
             // Display the game
-            puts("\033[1;33m!Important\033[0m : uppercase: Black peices & lowercase: White pieces");
-            puts("\033[1;31m!Important\033[0m Read the section about game to learn how to put each move in the puzzle \n");
+            puts(CLR_R "!Important" CBL_N ": uppercase: Black peices & lowercase: White pieces");
+            puts(CLR_Y "!Important" CBL_N ": Read the section about game to learn how to put each move in the puzzle \n");
             puts("[░R][ N][░B][ Q][░K][ B][░N][ R]8");
             puts("[ P][░P][ P][░P][ P][░P][ P][░P]7");
             puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
@@ -50,7 +52,7 @@ int main(void) {
             puts("[░p][ p][░p][ p][░p][ p][░p][ p]2");
             puts("[ r][░n][ b][░q][ k][░b][ n][░r]1");
             puts("-a---b---c---d---e---f---g---h--");
-            printf("\nPuzzles:\n1:Mate in 1\n2:Mate in 2\nEnter: ");
+            printf("\nPuzzles:\n1:Mate\n\nEnter: ");
             
             ara();
             
@@ -102,7 +104,7 @@ int main(void) {
             		for(i=0;;){
             			printf("\nWhat's the move: ");
             			araa();
-            			if(!strcmp(p, "rh1")){
+            			if(!strcmp(p, "rh3")){
             				bengo();
             				break;
             			}
@@ -163,6 +165,374 @@ int main(void) {
             				continue;
             			}
             		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][ r][░░][  ]6");
+           			puts("[  ][░k][  ][░K][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░p][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░b][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][ b][░r]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nremember the move of pawn like that e5 or xd6\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "f4")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][ r][░░]5");
+           			puts("[░░][  ][░░][  ][░K][  ][░░][  ]4");
+           			puts("[  ][░░][ k][░n][  ][░R][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "re5")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░r]5");
+           			puts("[░░][  ][░░][ K][░░][  ][░░][  ]4");
+           			puts("[  ][░k][ r][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][ p][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][ b][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "f3")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][ K][░R][  ][░░][  ]4");
+           			puts("[  ][░k][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][ p][░░][  ][░░][ q]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "qd6")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░p][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][ K][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░b][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][ k][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "f8=q")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in one
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░r][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░K][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][ p][░n][  ][░░][  ]4");
+           			puts("[  ][░░][ k][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop mate in one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "nf6")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		// Puzzle mate in two
+            		pn();
+           			puts("[░░][ q][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[ K][░░][  ][░k][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "kc3")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		/* Move 2 */
+            		pn();
+           			puts("[░░][ q][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░K][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][ k][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move two
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "qb4")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		// End
+            		
+            		// Puzzle mate in two
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		/* Move 2 */
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move two
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		// End
+            		
+            		// Puzzle mate in two
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		/* Move 2 */
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move two
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		// End
+            		
+            		// Puzzle mate in two
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move one
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		
+            		/* Move 2 */
+            		pn();
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]8");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]7");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]6");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]5");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]4");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]3");
+           			puts("[░░][  ][░░][  ][░░][  ][░░][  ]2");
+           			puts("[  ][░░][  ][░░][  ][░░][  ][░░]1");
+           			puts("-a---b---c---d---e---f---g---h--");
+           			
+           			// Loop move two
+            		for(i=0;;){
+            			printf("\nWhat's the move: ");
+            			araa();
+            			if(!strcmp(p, "rh8")){
+            				bengo();
+            				break;
+            			}
+            			else{
+            				i++;
+            				continue;
+            			}
+            		}
+            		// End
             }
             break;
 		
