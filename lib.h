@@ -17,7 +17,7 @@ void cl() {
 }
 
 void bengo(){
-	int r = rand() % 4;
+	int r = rand() % 6;
 	switch (r) {
 		case 1:
 			puts("Bengo\n");
@@ -30,6 +30,12 @@ void bengo(){
 			break;
 		case 4:
 			puts("Let's go\n");
+			break;
+		case 5:
+			puts("Check mate\n");
+			break;
+		case 6:
+			puts("Victory\n");
 			break;
 	}
 }
