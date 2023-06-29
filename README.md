@@ -7,6 +7,6 @@ cc -o game game.c
 ./game
 ````
 
-## What if do this
+## What if, do this
 
 If you learn `if`, `else`, `switch`, `for`, etc... you can do many things, but in long long ways
